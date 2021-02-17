@@ -1,7 +1,6 @@
 import React from 'react';
 import {
-  View,
-  Text
+  View
 } from 'react-native';
 import ListaAnimales from './src/componentes/ListaAnimales';
 import Titulo from './src/componentes/Titulo';

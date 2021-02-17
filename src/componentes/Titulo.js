@@ -3,6 +3,7 @@ import {View,Text,Image} from 'react-native';
 
 const Titulo = () => {
     return (
+        //Header para el título y logo de la empresa
         <View style={styles.view}>
             <Image style={styles.estiloImagen} source={require('../imagenes/iconoM.png')}
             />

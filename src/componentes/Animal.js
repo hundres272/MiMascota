@@ -2,15 +2,19 @@ import React from 'react';
 import {View,Text,Image,TouchableOpacity,Linking} from 'react-native';
 
 const Animal = (props) => {
+    //Desestructuración de atributos para trabajarlos directamente
     const {id,raza,nombre,fotografia,url} = props.datos;
+    //La siguiente función permite abrir el navegador en la url definida
     function onpress(){
         Linking.openURL(url);
     }
     return (
+        //Aquí se llena los valores correspondientes a cada mascota
         <View style={style.tarjetas}>
             <Text style={style.textCenter}>{raza}</Text>
             <Text style={style.textLeft}>ID: {id}</Text>
             <Text style={style.textLeft}>Nombre: {nombre}</Text>
+            {/* Componente que permite cargar una imagen */}
             <Image style={style.estiloImagen}
                 source={{
                     uri: fotografia
@@ -48,7 +52,6 @@ const style = {
     },
     estiloTexto:{
         fontSize: 16,
-        // fontEight: '400',
         textAlign: 'center',
         paddingTop: 7,
         paddingBottom: 7,
