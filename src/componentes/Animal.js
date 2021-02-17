@@ -7,10 +7,10 @@ const Animal = (props) => {
         Linking.openURL(url);
     }
     return (
-        <View>
-            <Text>Raza: {raza}</Text>
-            <Text>ID: {id}</Text>
-            <Text>Nombre: {nombre}</Text>
+        <View style={style.tarjetas}>
+            <Text style={style.textCenter}>{raza}</Text>
+            <Text style={style.textLeft}>ID: {id}</Text>
+            <Text style={style.textLeft}>Nombre: {nombre}</Text>
             <Image style={style.estiloImagen}
                 source={{
                     uri: fotografia
@@ -29,17 +29,22 @@ const style = {
         justifyContent: 'space-between'
     },
     estiloImagen: {
-        height:300,
-        width: '100%',
-        alignItems: 'center'
+        height: 400,
+        width: '96%',
+        alignItems: 'center',
+        margin: '2%',
+        marginBottom: 10
     },
     estiloBoton:{
         alignSelf: 'stretch',
-        backgroundColor: '#D5D8DB',
+        backgroundColor: '#52BE80',
         borderWidth: 2,
         paddingTop: 7,
         marginLeft:7,
-        marginRight: 7
+        marginRight: 7,
+        marginBottom: 10,
+        borderRadius: 20,
+        borderColor: 'transparent'
     },
     estiloTexto:{
         fontSize: 16,
@@ -47,7 +52,22 @@ const style = {
         textAlign: 'center',
         paddingTop: 7,
         paddingBottom: 7,
-        color: '#296899'
+        color: 'black'
+    },
+    tarjetas: {
+        margin: 10,
+        backgroundColor: '#ABEBC6',
+        borderRadius: 7,
+        borderColor: 'black'
+    },
+    textCenter: {
+        textAlign: 'center',
+        fontSize: 20,
+        marginTop: 10,
+    },
+    textLeft: {
+        marginLeft: 10,
+        fontSize: 15
     }
 }
 

@@ -3,18 +3,30 @@ import {View,Text,Image} from 'react-native';
 
 const Titulo = () => {
     return (
-        <>
-            <View><Text>Mascotas</Text></View>
+        <View style={styles.view}>
             <Image style={styles.estiloImagen} source={require('../imagenes/iconoM.png')}
             />
-        </>
+            <Text style={styles.titulo}>Mascotas</Text>
+        </View>
     );
 }
 
 const styles = {
-    estiloImage: {
-        width: 100,
-        height: 100,
+    titulo: {
+        fontSize: 30
+    },
+    view: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#229954'
+    },
+    estiloImagen: {
+        width: 50,
+        height: 50,
+        marginTop: 10,
+        marginBottom: 10,
+        marginRight: 20
     }
 };
 
